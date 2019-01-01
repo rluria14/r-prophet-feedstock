@@ -16,8 +16,8 @@ Summary: Implements a procedure for forecasting time series data based on an add
 Current build status
 ====================
 
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-prophet-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-prophet-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/r-prophet-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-prophet-feedstock)
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
