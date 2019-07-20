@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   # given by the availability of rstan
   skip: true  # [win]
   rpaths:
@@ -72,6 +72,7 @@ about:
     and several seasons of historical data. Prophet is robust to missing data and shifts
     in the trend, and typically handles outliers well.
   license_family: BSD
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause'
 
 extra:
   recipe-maintainers:
