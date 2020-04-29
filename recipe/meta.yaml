@@ -1,4 +1,4 @@
-{% set version = "0.6" %}
+{% set version = "0.6.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/prophet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/prophet/prophet_{{ version }}.tar.gz
-  sha256: 09bc3d1ebe3d39bf9d380e2e964ae9648a3f01cad42524a5eac739c7ad8f909f
+  sha256: 61c2f9c11676f77896fea188d74acd28a9be0ce94769aac7c083848118816521
 
 build:
   merge_build_host: true  # [win]
@@ -27,11 +27,11 @@ requirements:
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}make
-    - {{posix}}sed               # [win]
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-rcpp >=0.12.0
@@ -40,20 +40,22 @@ requirements:
     - r-extradistr
     - r-ggplot2
     - r-rlang >=0.3.0.1
-    - r-rstan >=2.14.0
+    - r-rstan >=2.18.1
+    - r-rstantools >=2.0.0
     - r-scales
     - r-tidyr >=0.6.1
     - r-xts
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=0.12.0
     - r-dplyr >=0.7.7
     - r-dygraphs >=1.1.1.4
     - r-extradistr
     - r-ggplot2
     - r-rlang >=0.3.0.1
-    - r-rstan >=2.14.0
+    - r-rstan >=2.18.1
+    - r-rstantools >=2.0.0
     - r-scales
     - r-tidyr >=0.6.1
     - r-xts
@@ -66,9 +68,8 @@ test:
 about:
   home: https://github.com/facebook/prophet
   license: BSD_3_clause
-  summary: Implements a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality,
-    plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. Prophet is robust to missing data
-    and shifts in the trend, and typically handles outliers well.
+  summary: Implements a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. Prophet is robust to missing
+    data and shifts in the trend, and typically handles outliers well.
   license_family: BSD
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause
 
