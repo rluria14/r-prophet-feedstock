@@ -40,7 +40,8 @@ requirements:
     - r-extradistr
     - r-ggplot2
     - r-rlang >=0.3.0.1
-    - r-rstan >=2.14.0
+    - r-rstan >=2.18.1
+    - r-stantools >=2.0.0
     - r-scales
     - r-tidyr >=0.6.1
     - r-xts
@@ -53,7 +54,8 @@ requirements:
     - r-extradistr
     - r-ggplot2
     - r-rlang >=0.3.0.1
-    - r-rstan >=2.14.0
+    - r-rstan >=2.18.1
+    - r-stantools >=2.0.0
     - r-scales
     - r-tidyr >=0.6.1
     - r-xts
