@@ -14,6 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
+  skip: True  # [win and r_base == "4.0"]
   number: 2
   # given by the availability of rstan
   rpaths:
