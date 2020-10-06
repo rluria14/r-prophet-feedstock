@@ -10,6 +10,10 @@ echo CXX14FLAGS = -Wa,-mbig-obj -g0 -O2 >> "%MAKECONF_FILE%"
 
 rd /s /q D:/bld/r-prophet_1602006713990/_h_env/lib/R/library/00LOCK-work/00new/prophet/libs/x64/
 
+set CURRENT_PATH=%~dp0
+set LIBRARY_PATH=%CURRENT_PATH%
+set PATH=%LIBRARY_PATH%;%LIBRARY_PREFIX%;%LIBRARY_BIN%;%PATH%
+
 "%R%" CMD INSTALL --build .
 IF %ERRORLEVEL% NEQ 0 exit 1
 
