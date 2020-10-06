@@ -20,8 +20,6 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
-  missing_dso_whitelist:
-    - '*/libs/x64/prophet.dll'  # [win]
 
 requirements:
   build:
